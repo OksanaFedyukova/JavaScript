@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Material UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## General
+Please, create an application with the following structure of elements:
 
-## Available Scripts
+![](./public//images/taskScreenshots/main-top.png )
+ 
+  
+![](./public//images/taskScreenshots/main-bottom.png )
 
-In the project directory, you can run:
 
-### `npm start`
+## 1. Header
+for screen size 1200px and more should contain title, menu and action buttons as shown below:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![](./public//images/taskScreenshots/header-lg.png )
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+for [900px - 1200px) is similar, but space between action buttons is smaller:
+![](./public//images/taskScreenshots/header-md.png )
 
-### `npm test`
+for less than 900px menu should hide and be avaliable via **menu** button, and action buttons are not in the header and title should appear in the center:
+<div><img src="./public//images/taskScreenshots/header-sm.png" width="650"><div>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 2. Menu
+Menu should have elements as shown below for screens 900 px and bigger. Stories item should have submenu
+<div><img src="./public//images/taskScreenshots/menu-desktop.gif" width="300"><div>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+for less than 900px menu should open on click on **menu** button . Stories item should have submenu (use Accordion component for that):
+<div><img src="./public//images/taskScreenshots/menu-mobile.gif" width="450"><div>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 3. Banner
+Banner should contain 
+ - image (you can use any pictue). Change image size accordingly to the size of the screen (you can choose size values)
+ - 3 text elements with different sizes (use Typography component for this),
+ - button **Donate** - customize it so that it looks like shown below (size, sharp edges, change text color on hover)
+<div><img src="./public//images/taskScreenshots/banner.gif" width="700"><div>
 
-### `npm run eject`
+for screen size less than 600px image and text elements should be aligned vertically:
+<div><img src="./public//images/taskScreenshots/banner-small.png" width="400"><div>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 4. Content
+Dilplay elements like on the screen below for screens 900 px and bigger:
+(elements should be placed in 3 cfolumns)
+<div><img src="./public//images/taskScreenshots/content.png" width="800"><div>
+You can use any pictures you like.
+<br/><br/>
+for [600px - 900px) elements should be placed in two columns:
+<div><img src="./public//images/taskScreenshots/content-sm.png" width="500"><div>
+<br/><br/>
+for less than 600px screen size elements should be placed in one column:
+<div><img src="./public//images/taskScreenshots/content-xs.png" width="250"><div>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+On each item should be a caption and *faforite* button customized as ahown below:
+<div><img src="./public//images/taskScreenshots/image-list-item.gif" width="250"><div>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 5. Footer
+Sould consist of 3 sections: ABOUT US, INFORMATION, MY ACCOUNT.
+for screen size 1200px and more it should look like this:
+<div><img src="./public//images/taskScreenshots/footer.png" width="800"><div>
+<br/>
+for [600px - 1200px):
+<div><img src="./public//images/taskScreenshots/footer-sm-md.png" width="500"><div>
+<br/>
+for less than 600px:
+<div><img src="./public//images/taskScreenshots/footer-xs.png" width="300"><div>
+<br/>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 6. Action icons
 
-## Learn More
+for screen size 900 and more - explained in section **Header**
+<br/>
+for less than 900px action items should be placed at the bottom of the screen:
+<div><img src="./public//images/taskScreenshots/action-buttons.png" width="550"><div>
+<br /><br />
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 7. Customization
+At least one component should be overriden (customized) at theme level.  
+Palette should be overriden (customized) at theme level.  
+Use styles/index.js for the theme customization.  
+<br /><br />    
+    
+## *Note*
+*Not all of the requirements are tested by unit tests, but still, try to implement all of them.*<br />
+*If you have ideas what else would be good to add, you are welcome to do it in addition to existing requirements.* <br />
+*You can use the colors that are defined in styles/index.js. Also, you can change values of the colors to your liking. But please, not use the default color scheme*
